@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Contact Navbar -->
+        <nav class="bg-white text-blue-900 shadow fixed top-0 w-full z-50">
+            <div class="w-full mx-auto px-6 py-2 flex justify-between items-center">
+                <div class="text-2xl font-bold">
+                    <a href="index.html" class="flex items-center">
+                        <img src="/assets/img/FC Logo mod.jpg" alt="Faith Communication Logo"
+                            class="h-20 mr-2 rounded-xl">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-10">
+                    <a href="index.html" class="hover:text-[#a18b28]">Accueil</a>
+                    <a href="services.html" class="hover:text-[#a18b28]">Nos Services</a>
+                    <a href="#blog" class="hover:text-[#a18b28]">Blog</a>
+                    <a href="index.html#about" class="hover:text-[#a18b28]">À Propos</a>
+                </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <!-- Icone du menu (trois lignes) -->
+            <button id="menuBtn" title="menu" class="text-[#a18b28] focus:outline-none">
+                <svg class="w-6 h-6 block" id="menuIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+
+                <!-- Icone de fermeture (X) cachée au départ -->
+                <svg class="w-6 h-6 hidden" id="closeIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+            </div>
+            <div id="mobileMenu" class="hidden bg-white md:hidden fixed z-10 w-full h-screen p-6 absolute">
+                <!-- Decorative SVG (Background Circle) -->
+                <svg class="absolute top-0 left-0 w-64 h-64 text-blue-100 opacity-50 transform -translate-x-10 -translate-y-10"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+                    <circle cx="50" cy="50" r="50" />
+                </svg>
+                <svg class="absolute bottom-0 right-0 w-64 h-64 text-[#a18b28] opacity-30 transform translate-x-10 translate-y-10"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+                    <rect width="100" height="100" rx="20" />
+                </svg>
+                
+                <!-- Decorative Dots -->
+                <svg class="absolute top-20 left-12 w-24 h-24 text-blue-300 opacity-20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100" fill="currentColor">
+                    <circle cx="10" cy="10" r="3" />
+                    <circle cx="30" cy="10" r="3" />
+                    <circle cx="50" cy="10" r="3" />
+                    <circle cx="70" cy="10" r="3" />
+                    <circle cx="10" cy="30" r="3" />
+                    <circle cx="30" cy="30" r="3" />
+                    <circle cx="50" cy="30" r="3" />
+                    <circle cx="70" cy="30" r="3" />
+                </svg>
+            
+                <!-- Menu Links -->
+                <div class="relative z-20 flex flex-col space-y-6">
+                    <a href="index.html" class="block px-4 py-2 text-blue-900 hover:bg-blue-800 rounded-lg hover:text-white">Accueil</a>
+                    <a href="services.html" class="block px-4 py-2 text-blue-900 hover:bg-blue-800 rounded-lg hover:text-white">Nos Services</a>
+                    <a href="#blog" class="block px-4 py-2 text-blue-900 hover:bg-blue-800 rounded-lg hover:text-white">Blog</a>
+                    <a href="#about" class="block px-4 py-2 text-blue-900 hover:bg-blue-800 rounded-lg hover:text-white">À Propos</a>
+                </div>
+            </div>
+            
+        </nav>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="relative py-20 bg-gradient-to-r from-blue-50 to-gray-100 px-4 overflow-hidden mt-12">
+        <!-- Decorative SVG -->
+        <svg class="absolute top-0 left-0 w-64 h-64 text-blue-200 opacity-50 transform -translate-x-10 -translate-y-10"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+            <circle cx="50" cy="50" r="50" />
+        </svg>
+        <svg class="absolute bottom-0 right-10 w-64 h-64 text-[#a18b28] opacity-30 transform translate-x-20 translate-y-20"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+            <rect width="100" height="100" rx="20" />
+        </svg>
+        <svg class="absolute top-28 right-10 w-48 h-48 text-blue-300 opacity-40 transform rotate-45"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+            <polygon points="50,0 100,50 50,100 0,50" />
+        </svg>
+
+        <div class="max-w-7xl mx-auto relative">
+            <h2 class="text-5xl font-bold text-blue-900 text-center">Contactez-<span class="text-[#a18b28]">nous</span></h2>
+            <p class="mt-4 text-lg text-gray-700 text-center">Une question ou un projet en tête ? Nous sommes là pour vous répondre.</p>
+            <div class="mt-8 flex flex-col md:flex-row justify-center md:justify-between items-start space-y-8 md:space-y-0 md:space-x-8">
+                <!-- Formulaire -->
+                <div class="w-full md:w-1/2 p-4 lg:px-14">
+                    <form
+                        class="bg-white shadow-lg rounded-lg p-8 space-y-6 border-t-4 border-[#a18b28] transform hover:scale-105 transition-transform">
+                        <!-- Nom -->
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-user text-blue-900 text-xl"></i>
+                            <input type="text" name="name" placeholder="Votre nom"
+                                class="border-gray-300 p-3 w-full rounded-lg focus:ring focus:ring-[#a18b28]">
+                        </div>
+                        <!-- Email -->
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-blue-900 text-xl"></i>
+                            <input type="email" name="email" placeholder="Votre email"
+                                class="border-gray-300 p-3 w-full rounded-lg focus:ring focus:ring-[#a18b28]">
+                        </div>
+                        <!-- Message -->
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-comment text-blue-900 text-xl mt-2"></i>
+                            <textarea name="message" rows="4" placeholder="Votre message"
+                                class="border-gray-300 p-3 w-full rounded-lg focus:ring focus:ring-[#a18b28]"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-[#a18b28] transition-colors">
+                            Envoyer
+                        </button>
+                    </form>
+                </div>
+
+
+                <!-- Coordonnées -->
+                <div class="w-full md:w-1/2 p-6 lg:p-20 lg:pt-12">
+                    <div class="bg-white shadow-lg rounded-lg p-8 border-t-4 border-blue-900 space-y-6">
+                        <h3 class="text-2xl font-bold text-blue-900">Nos Coordonnées</h3>
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-phone text-[#a18b28] text-2xl"></i>
+                            <div>
+                                <p class="text-gray-700">Téléphone :</p>
+                                <p class="font-semibold text-blue-900">(+229) 63603819 / 67918468</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-envelope text-[#a18b28] text-2xl"></i>
+                            <div>
+                                <p class="text-gray-700">Email :</p>
+                                <p class="font-light text-blue-900">faithcommunication19@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-map-marker-alt text-[#a18b28] text-2xl"></i>
+                            <div>
+                                <p class="text-gray-700">Adresse :</p>
+                                <p class="font-semibold text-blue-900">Tankpê Calavi carrefour Parana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <p>&copy; 2024 Faith Communication. Tous droits réservés.</p>
+            <div class="mt-4 space-x-6">
+                <a title="Facebook" href="https://www.facebook.com/RHHarim" class="hover:text-[#a18b28]"><i class="fab fa-facebook-f"></i></a>
+                <a title="Twitter" href="http://Wa.me/22963603819" class="hover:text-[#a18b28]"><i class="fab fa-whatsapp"></i></a>
+                <a title="Instagram" href="mailto:faithcommunication19@gmail.com" class="hover:text-[#a18b28]"><i class="fas fa-envelope"></i></a>
+                <!-- <a title="LinkedIn" href="#" class="hover:text-[#a18b28]"><i class="fab fa-linkedin-in"></i></a> -->
+            </div>
+        </div>
+    </footer>
+
+<!-- JavaScript for Mobile Menu -->
+<script>
+    // Toggle Mobile Menu
+    document.getElementById('menuBtn').addEventListener('click', function () {
+        var mobileMenu = document.getElementById('mobileMenu');
+        var menuIcon = document.getElementById('menuIcon');
+        var closeIcon = document.getElementById('closeIcon');
+        
+        // Toggle mobile menu visibility
+        mobileMenu.classList.toggle('hidden');
+
+        // Toggle icons visibility
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+
+    // Close Mobile Menu when "X" button is clicked
+    document.getElementById('closeMenuBtn').addEventListener('click', function () {
+        var mobileMenu = document.getElementById('mobileMenu');
+        var menuIcon = document.getElementById('menuIcon');
+        var closeIcon = document.getElementById('closeIcon');
+        
+        // Close mobile menu
+        mobileMenu.classList.add('hidden');
+
+        // Switch icons back
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+    });
+    </script>
+</body>
+
+</html>

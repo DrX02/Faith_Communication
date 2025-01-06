@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith Communication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+    <style>
+        .animated-image {
+            animation: upDown 3s infinite;
+            /* Applique l'animation */
+        }
+
+        /* Définir l'animation */
+        @keyframes upDown {
+            0% {
+                transform: translateY(0);
+                /* Position initiale */
+            }
+
+            50% {
+                transform: translateY(-20px);
+                /* Monte de 20px */
+            }
+
+            100% {
+                transform: translateY(0);
+                /* Retour à la position initiale */
+            }
+        }
+
+        .intro {
+            background-image: url(/assets/img/undraw_product_iteration_kjok_no_bg.png);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-blue-900">
+    <section class="bg-blue-900 h-screen space-y-24 lg:space-y-0">
+<!-- Navbar -->
+<nav class="bg-white text-blue-900 shadow fixed top-0 w-full z-50">
+    <div class="w-full mx-auto px-6 py-2 flex justify-between items-center">
+        <div class="text-2xl font-bold">
+            <a href="index.html" class="flex items-center">
+                <img src="/assets/img/FC Logo mod.jpg" alt="Faith Communication Logo"
+                    class="h-20 mr-2 rounded-xl">
+            </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-10">
+            <a href="index.html" class="hover:text-[#a18b28]">Accueil</a>
+            <a href="services.html" class="hover:text-[#a18b28]">Nos Services</a>
+            <a href="#blog" class="hover:text-[#a18b28]">Blog</a>
+            <a href="index.html#about" class="hover:text-[#a18b28]">À Propos</a>
+            <a href="contact.html"
+                class="px-6 py-1 border-2 border-sky-500 hover:bg-blue-900 hover:text-white rounded-lg shadow-lg hover:bg-[#a18b28] transition-colors">Contact
+                <i class="fa-solid fa-phone-volume"></i></a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <!-- Icone du menu (trois lignes) -->
+            <button id="menuBtn" title="menu" class="text-[#a18b28] focus:outline-none">
+                <svg class="w-6 h-6 block" id="menuIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+
+                <!-- Icone de fermeture (X) cachée au départ -->
+                <svg class="w-6 h-6 hidden" id="closeIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden bg-white md:hidden fixed z-10 w-full h-screen p-6">
+
+        <!-- Decorative SVG (Background Circle) -->
+        <svg class="absolute top-0 left-0 w-64 h-64 text-blue-100 opacity-50 transform -translate-x-10 -translate-y-10"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+            <circle cx="50" cy="50" r="50" />
+        </svg>
+        <svg class="absolute bottom-0 right-0 w-64 h-64 text-[#a18b28] opacity-30 transform translate-x-10 translate-y-10"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+            <rect width="100" height="100" rx="20" />
+        </svg>
+
+        <!-- Menu Links -->
+        <div class="relative z-20 flex flex-col space-y-6">
+            <a href="index.html"
+                class="block px-4 py-2 text-blue-900 hover:bg-blue-800 rounded-lg hover:text-white">Accueil</a>
+            <a href="services.html"
+                class="block px-4 py-2 text-blue-900 hover:bg-blue-800 rounded-lg hover:text-white">Nos
+                Services</a>
+            <a href="#blog"
+                class="block px-4 py-2 text-blue-900 hover:bg-blue-800 rounded-lg hover:text-white">Blog</a>
+            <a href="#about"
+                class="block px-4 py-2 text-blue-900 hover:bg-blue-800 rounded-lg hover:text-white">À Propos</a>
+            <a href="contact.html"
+                class="block px-4 py-2 text-blue-900 hover:bg-blue-800 rounded-lg hover:text-white">Contact</a>
+        </div>
+    </div>
+</nav>
+
+
+        <!-- Hero Section -->
+        <section
+            class="text-white flex flex-col-reverse md:flex-row  items-center justify-between px-6 py-52 md:px-20 relative">
+            <!-- Text Content -->
+            <div class="text-center md:text-left md:max-w-md space-y-6">
+                <h1 class="text-3xl md:text-5xl font-bold">Bienvenue à Faith <span
+                        class="text-[#a18b28]">Communication</span> </h1>
+                <p class="text-lg md:text-xl">Agence de communication digitale, événementielle et de publicité</p>
+                <a href="#services"
+                    class="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#a18b28]">
+                    Découvrez nos services
+                </a>
+            </div>
+
+            <!-- Image -->
+            <div class="">
+                <img src="/assets/img/hero-img.png" alt="Hero Image" class="md:w-[60%] lg:w-[90%] animated-image">
+            </div>
+        </section>
+    </section>
+
+
+
+    <!-- Introduction Section -->
+    <section id="info" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center lg:space-x-24">
+            <div class="md:w-1/2 mt-8 md:mt-0 md:pl-12" >
+                <div class="h-1 bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 my-6"></div>
+                <h2 class="text-4xl font-bold">Qui sommes- <span class="text-[#a18b28]">nous</span> ?</h2>
+                <p class="mt-4">Faith Communication est une agence spécialisée dans la communication digitale et
+                    événementielle.Nous nous engageons à fournir des services de qualité pour répondre aux besoins de
+                    nos clients. <br>
+                    Notre objectif est de vous offrir des solutions sur mesure, créatives et efficaces, pour maximiser
+                    votre impact et atteindre vos objectifs avec brio.
+                </p>
+                <div class="mb-2 h-1 bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 my-6"></div>
+            </div>
+            <div class="md:flex md:w-1/2" >
+                <img src="/assets/img/undraw_product_iteration_kjok_no_bg.png" alt="Introduction"
+                    class="w-full h-auto rounded-lg">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 px-4 bg-gray-100 relative overflow-hidden">
+        <!-- Decorative SVG (Background) -->
+        <svg class="absolute top-0 left-0 w-64 h-64 text-blue-100 opacity-50 transform -translate-x-10 -translate-y-10"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+            <circle cx="50" cy="50" r="50" />
+        </svg>
+        <svg class="absolute bottom-0 right-0 w-64 h-64 text-[#a18b28] opacity-20 transform translate-x-20 translate-y-20"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+            <rect width="100" height="100" rx="20" />
+        </svg>
+        <svg class="absolute top-20 right-20 w-48 h-48 text-blue-300 opacity-30 transform rotate-45"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+            <polygon points="50,0 100,50 50,100 0,50" />
+        </svg>
+
+        <div class="container mx-auto text-center relative z-10">
+            <h2 class="text-3xl font-semibold mb-8">Nos<span class="text-[#a18b28]"> Prestations</span></h2>
+            <p class="max-w-3xl mx-auto text-gray-700">
+                Nous proposons une gamme complète de prestations conçues pour répondre à vos besoins en communication et
+                en marketing. De la création visuelle et production audiovisuelle, à la gestion de campagnes
+                publicitaires digitales, en passant par l'organisation d'événements et la formation en développement
+                personnel, nous vous accompagnons à chaque étape pour transformer vos idées en succès.
+            </p>
+
+            <!-- Grille des prestations -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 max-w-4xl mx-auto mt-12">
+                <!-- 1. Création Visuelle et Médias -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:bg-blue-200 transition-shadow duration-300 relative overflow-hidden">
+                    <svg class="absolute -top-8 -left-8 w-32 h-32 text-blue-100 opacity-50"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+                        <circle cx="50" cy="50" r="50" />
+                    </svg>
+                    <div class="flex items-center justify-center text-blue-500 mb-4">
+                        <i class="fas fa-paint-brush text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Création Visuelle et Médias</h3>
+                    <p class="text-gray-600">Graphisme</p>
+                    <p class="text-gray-600">Photographie Professionnelle</p>
+                    <p class="text-gray-600">Production d'Éléments Audiovisuels</p>
+                </div>
+
+                <!-- 2. Communication et Marketing Digital -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:bg-blue-200 transition-shadow duration-300 relative overflow-hidden">
+                    <svg class="absolute -bottom-8 -right-8 w-32 h-32 text-[#a18b28] opacity-30"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+                        <rect width="100" height="100" rx="20" />
+                    </svg>
+                    <div class="flex items-center justify-center text-blue-500 mb-4">
+                        <i class="fas fa-bullhorn text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Communication et Marketing Digital</h3>
+                    <p class="text-gray-600">Couverture Médiatique</p>
+                    <p class="text-gray-600">Communication Digitale</p>
+                    <p class="text-gray-600">Publicité et Vente sur Réseaux Sociaux</p>
+                </div>
+
+                <!-- 3. Formation et Développement Personnel -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:bg-blue-200 transition-shadow duration-300 relative overflow-hidden">
+                    <svg class="absolute top-8 right-8 w-24 h-24 text-blue-300 opacity-20"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+                        <polygon points="50,0 100,50 50,100 0,50" />
+                    </svg>
+                    <div class="flex items-center justify-center text-blue-500 mb-4">
+                        <i class="fas fa-chalkboard-teacher text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Formation et Développement Personnel</h3>
+                    <p class="text-gray-600">Rédaction Web et Copywriting</p>
+                    <p class="text-gray-600">Formation en Art Oratoire, Techniques de Vente Parfaite et Négociation</p>
+                    <p class="text-gray-600">Promotion d'Écrivains</p>
+                </div>
+
+                <!-- 4. Gestion de Projet et Relation Client -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:bg-blue-200 transition-shadow duration-300 relative overflow-hidden">
+                    <svg class="absolute top-0 left-0 w-16 h-16 text-blue-100 opacity-50"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+                        <circle cx="50" cy="50" r="50" />
+                    </svg>
+                    <div class="flex items-center justify-center text-blue-500 mb-4">
+                        <i class="fas fa-users-cog text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-3">Gestion de Projet et Relation Client</h3>
+                    <p class="text-gray-600">Création et Gestion de Page Facebook</p>
+                    <p class="text-gray-600">Maîtrise de Cérémonie</p>
+                    <p class="text-gray-600">Formation en Art Oratoire, Techniques de Vente Parfaite et Négociation</p>
+                </div>
+            </div>
+
+            <!-- Boutons -->
+            <div class="mt-12 flex justify-center space-x-6">
+                <a href="services.html"
+                    class="px-6 py-3 border-2 border-sky-500 hover:bg-blue-900 hover:text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-[#a18b28] transition-colors">
+                    Plus de détail
+                </a>
+                <a href="contact.html"
+                    class="px-6 py-3 bg-blue-900 text-white text-lg font-normal rounded-lg shadow-lg hover:bg-[#a18b28] transition-colors">
+                    Nous joindre
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Blog Section -->
+    <!-- <section id="blog" class="py-20 bg-gray-50 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="flex items-center my-6">
+                <div class="border-t border-gray-300 flex-grow"></div>
+                <h2 class="text-4xl font-bold"> Projets </h2>
+                <div class="border-t border-gray-300 flex-grow"></div>
+            </div>
+
+
+            <p class="mt-4">Découvrez les dernières actualités et nos projets récents.</p>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <img src="https://img.freepik.com/photos-gratuite/colibri-abstrait-vibrant-volant-elegance-genere-par-ia_188544-19557.jpg?t=st=1734041860~exp=1734045460~hmac=4c2cba8f57716f24c5fade9d75813df2f257054ed61a01867a5f4b3c949e7fb0&w=1380"
+                        alt="Article 1" class="w-full h-48 object-cover rounded">
+                    <h4 class="mt-4 text-lg font-semibold">Article 1</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <img src="https://img.freepik.com/photos-gratuite/portrait-oeil-abstrait-elegance-jeunes-femmes-generee-par-ia_188544-9712.jpg?t=st=1734041748~exp=1734045348~hmac=8bf126f50b8e72d85dbf53525da21b1dbad4b7656570c55bae9310176895ee0e&w=1380"
+                        alt="Article 2" class="w-full h-48 object-cover rounded">
+                    <h4 class="mt-4 text-lg font-semibold">Article 2</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <img src="https://img.freepik.com/photos-gratuite/fond-abstrait-peinture-illustration-encre-toile-fond-goutte-creativite-generee-par-ia_188544-15660.jpg?t=st=1734041820~exp=1734045420~hmac=7db62d2e1126701b242b7884148fbaaa7ecd8b47eb0711ae9e1500ebdbb33e9b&w=1380"
+                        alt="Article 3" class="w-full h-48 object-cover rounded">
+                    <h4 class="mt-4 text-lg font-semibold">Article 3</h4>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center lg:space-x-24">
+            <div class="md:w-1/2 mt-8 md:mt-0 md:pl-12">
+                <div class="h-1 bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 my-6"></div>
+                <h2 class="mt-4 text-4xl font-bold">À propos de Faith Communication</h2>
+                <h4 class="mt-12 text-4xl font-semibold">Je suis <span class="text-[#a18b28]">Harim LASSISSI</span>
+                </h4>
+                <p class="mt-4 font-semibold">Journaliste et PDG de Faith Communication</p>
+                <p class="mt-4">Chez nous, la passion et la créativité sont au cœur de tout ce que nous entreprenons.
+                    Nous sommes une équipe dynamique, animée par le désir constant d'innover et de repousser les limites
+                    de la communication digitale et événementielle. Forts de notre expertise et de notre engagement,
+                    nous travaillons main dans la main avec nos clients pour comprendre leurs besoins spécifiques et
+                    transformer leurs idées en solutions concrètes et percutantes.
+                    <br>
+                    Notre mission va bien au-delà de la simple prestation de services. Nous visons à offrir des
+                    expériences uniques et mémorables, en conjuguant efficacité, créativité et stratégie. Chaque projet
+                    que nous réalisons est une occasion de réinventer les approches traditionnelles pour proposer des
+                    solutions sur mesure, adaptées à un monde en constante évolution. Avec nous, vos ambitions prennent
+                    vie, et votre succès devient notre priorité.
+                </p>
+                <div class="mb-2 h-1 bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 my-6"></div>
+            </div>
+            <div class="md:flex md:w-1/2">
+                <img src="/assets/img/ab.jpg" alt="À propos de nous" class="w-full h-auto rounded-lg">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Section Partenaires -->
+<section class="py-8 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+        <!-- Titre -->
+        <h2 class="text-2xl font-bold text-center mb-6">Nos <span class="text-[#a18b28]"> Partenaires</span></h2>
+
+        <!-- Grille des logos -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center">
+            <!-- Logo 1 -->
+            <div class="flex justify-center">
+                <img src="/assets/img/L1-removebg.png" alt="Partenaire 1" class="h-28 grayscale hover:grayscale-0 transition">
+            </div>
+            <!-- Logo 2 -->
+            <div class="flex justify-center">
+                <img src="/assets/img/L2-removebg-preview.png" alt="Partenaire 2" class="h-28 grayscale hover:grayscale-0 transition">
+            </div>
+            <!-- Logo 3 -->
+            <div class="flex justify-center">
+                <img src="/assets/img/L3-removebg-preview.png" alt="Partenaire 3" class="h-28 grayscale hover:grayscale-0 transition">
+            </div>
+            <!-- Logo 4 -->
+            <div class="flex justify-center">
+                <img src="/assets/img/L5-removebg-preview.png" alt="Partenaire 4" class="h-28 grayscale hover:grayscale-0 transition">
+            </div>
+            <!-- Logo 5 -->
+            <div class="flex justify-center">
+                <img src="/assets/img/L4.jpg" alt="Partenaire 5" class="h-28 grayscale hover:grayscale-0 transition rounded-full">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-100  ">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 py-8">
+    
+            <!-- Section 1 : Logo et adresse -->
+            <div>
+                <a href="index.html" class="flex items-center mb-4">
+                    <img src="/assets/img/FC_Logo-removebg-preview.png" alt="Logo Faith Communication" class="h-32">
+                </a>
+                <p class="text-sm leading-relaxed">
+                    Tankpê<br>carrefour Parana<br>Calavi   
+                </p>
+                <p class="text-sm mt-2">
+                    <strong>Téléphone :</strong> (+229) 63603819 <br>
+                    <strong>Email :</strong> faithcommunication19@gmail.com
+                </p>
+            </div>
+    
+            <!-- Section 2 : Liens utiles -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4 py-8">Liens Utiles</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-[#a18b28]">&raquo; Accueil</a></li>
+                    <li><a href="#about" class="hover:text-[#a18b28]">&raquo; À Propos</a></li>
+                    <li><a href="services.html" class="hover:text-[#a18b28]">&raquo; Nos Services</a></li>
+                    <li><a href="terms.html" class="hover:text-[#a18b28]">&raquo; Conditions d'utilisation</a></li>
+                    <li><a href="privacy.html" class="hover:text-[#a18b28]">&raquo; Politique de confidentialité</a></li>
+                </ul>
+            </div>
+    
+            <!-- Section 3 : Nos Services -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4 py-8">Nos Services</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="services.html" class="hover:text-[#a18b28]">&raquo; Graphisme</a></li>
+                    <li><a href="services.html" class="hover:text-[#a18b28]">&raquo; Communication Digitale</a></li>
+                    <li><a href="services.html" class="hover:text-[#a18b28]">&raquo; Production Audiovisuelle</a></li>
+                    <li><a href="services.html" class="hover:text-[#a18b28]">&raquo; Formation et Développement</a></li>
+                    <li><a href="services.html" class="hover:text-[#a18b28]">&raquo; Gestion de Page Facebook</a></li>
+                </ul>
+            </div>
+    
+            <!-- Section 4 : Réseaux sociaux -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4 py-8">Nos Réseaux Sociaux</h4>
+                <p class="text-sm">Suivez-nous pour rester connecté et découvrir nos actualités.</p>
+                <div class="flex space-x-4 mt-4">
+                    <!-- <a href="#" title="link" class="text-blue-500 hover:text-[#a18b28]">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a> -->
+                    <a href="https://www.facebook.com/RHHarim" title="link" class="text-blue-500 hover:text-[#a18b28]">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="http://Wa.me/22963603819" title="link" class="text-blue-500 hover:text-[#a18b28]">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="mailto:faithcommunication19@gmail.com" title="link" class="text-blue-500 hover:text-[#a18b28]">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Footer bas -->
+        <div class="bg-blue-900 text-white text-center mt-8 border-t border-gray-200 pt-6">
+            <p class="text-sm py-4">&copy; 2024 Faith Communication. Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+
+<!-- JavaScript for Mobile Menu -->
+<script>
+    // Toggle Mobile Menu
+    document.getElementById('menuBtn').addEventListener('click', function () {
+        var mobileMenu = document.getElementById('mobileMenu');
+        var menuIcon = document.getElementById('menuIcon');
+        var closeIcon = document.getElementById('closeIcon');
+        
+        // Toggle mobile menu visibility
+        mobileMenu.classList.toggle('hidden');
+
+        // Toggle icons visibility
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+
+    // Close Mobile Menu when "X" button is clicked
+    document.getElementById('closeMenuBtn').addEventListener('click', function () {
+        var mobileMenu = document.getElementById('mobileMenu');
+        var menuIcon = document.getElementById('menuIcon');
+        var closeIcon = document.getElementById('closeIcon');
+        
+        // Close mobile menu
+        mobileMenu.classList.add('hidden');
+
+        // Switch icons back
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+    });
+
+    // Smooth scrolling on anchor links
+    AOS.init();
+</script>
+</body>
+
+</html>
